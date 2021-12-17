@@ -4,8 +4,7 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-  const current_url = req.url
-  console.log(current_url);
+  const current_url = req.url;
   current_url === '/welcome' ?
     res.end(JSON.stringify(
       {
@@ -15,7 +14,7 @@ const server = http.createServer((req, res) => {
   :
   res.end(JSON.stringify(
     {
-      "message":"not /welcome",
+      "message":"not found",
     }
   ))
 });

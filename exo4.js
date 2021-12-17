@@ -5,15 +5,16 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  const current_url = req.url
-  const myURL = current_url
-  var q = url.parse(myURL, true);
-  var qdata = q.query
-  console.log(qdata)
-    qdata.message ?
+  res.writeHead(
+    200,
+    {
+      'Content-Type': 'application/json'
+    }
+  );
+  var q = url.parse(req.url, true);
+    q.query.message ?
     res.end(
-        `your message : ${qdata.message}`,
+        `your message : ${q.query.message}`,
     )
   :
   res.end(JSON.stringify(

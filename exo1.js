@@ -5,7 +5,7 @@ const port = 3000;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 400;
-  console.log(res.statusCode)
+  console.log(res.statusCode);
 });
 
 server.listen(port, hostname, () => {
