@@ -63,6 +63,4 @@ const promise2 = intDiffChecker(3,2)
 promise2.then(goodInt,badInt)
 
 const promise3 = dateChecker("12/12/2012")
-
-console.log(promise3)
-
+promise3.then(goodInt,badInt)
