@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2",
+    "express-joi-validation": "^5.0.1",
+    "joi": "^17.5.0",
     "sequelize": "^6.12.5",
     "sequelize-cli": "^6.3.0",
     "sqlite3": "^5.0.2"
